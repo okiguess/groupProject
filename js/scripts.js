@@ -17,7 +17,7 @@ Player.prototype.checkCell = function () {
 // checks cell for item property (true/false)
   if (Player.cell.items == true) {
   // if Cell item property is true, list out items in Cell.items array
-    $("#actionInfo").text("There is a ")
+    $("#actionInfo").text("You see a ")
     Cell.items.forEach(function(item){
       $("#actionInfo").text("<li>" + item.name + "</li>");
     $("#actionButton").show();
@@ -127,11 +127,11 @@ Player.prototype.mvUp = function(){
             this.setCell();
             return "You walk north.";
         }
-        else {return "You are stopped by an obstacle. Maybe there's an item nearby to help you get passed it.";}
+        else {return "You can't get past. Maybe there's an item nearby that will help.";}
       }
-      else {"You are stopped by a wall.";}
+      else {"You run into a wall.";}
     }
-    else {return "You are unable to go any further in that direction.";}
+    else {return "You can't go any further.";}
   }
 }
 Player.prototype.mvDown = function(){
@@ -148,11 +148,11 @@ Player.prototype.mvDown = function(){
             this.setCell();
             return "You walk south.";
         }
-        else {return "You are stopped by an obstacle. Maybe there's an item nearby to help you get passed it.";}
+        else {return "You can't get past. Maybe there's an item nearby that will help.";}
       }
-      else {"You are stopped by a wall.";}
+      else {"You run into a wall.";}
     }
-    else {return "You are unable to go any further in that direction.";}
+    else {return "You can't go any further.";}
   }
 }
 Player.prototype.mvRight = function(){
@@ -169,11 +169,11 @@ Player.prototype.mvRight = function(){
           this.setCell();
           return "You walk east.";
             }
-            else {return "You are stopped by an obstacle. Maybe there's an item nearby to help you get passed it.";}
+            else {return "You can't get past. Maybe there's an item nearby that will help.";}
+          }
+          else {"You run into a wall.";}
         }
-        else {return "You are stopped by a wall.";}
-    }
-    else {return "You are unable to go any further in that direction.";}
+      else {return "You can't go any further.";}
   }
 }
 Player.prototype.mvLeft = function(){
@@ -190,11 +190,11 @@ Player.prototype.mvLeft = function(){
             this.setCell();
             return "You walk west.";
         }
-        else {return "You are stopped by an obstacle. Maybe there's an item nearby to help you get passed it.";}
+        else {return "You can't get past. Maybe there's an item nearby that will help.";}
       }
-      else {return "You are stopped by a wall.";}
+      else {"You run into a wall.";}
     }
-    else {return "You are unable to go any further in that direction.";}
+    else {return "You can't go any further.";}
   }
 }
 
