@@ -405,7 +405,7 @@
 
   //this is the global list containing all rooms
   var roomList = [testRoom1,testRoom2];
-  var player1  = new Player("Bob",testRoom1,2,2);
+  var player1  = new Player("Bob",testRoom1,2,0);
   var rustyKey = new KeyItem("rustyKey","An old key.");
   var shotgun  = new KeyItem("shotgun" ,"Congratulations! You found a shotgun...You can't use it for anything...but you have one.");
 
